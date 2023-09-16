@@ -1,38 +1,175 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Indie Flower";
+  src: url("assets/IndieFlower-Regular.ttf") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin:0;
+  font-family: 'Indie Flower';
+  color: #CAECE6;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-color: #011627;
+  background-image: url("./assets/background.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.nav-bar{
+  display: grid;
+  position:fixed;
+  width: 5em;
+  height: 100%;
+  background-color: #01101D;
+  justify-content: center;
+  align-items: center;
+}
+.Links,.Links-2{
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+}
+.icons,.icons-2{
+  position:inherit;
+  width:3rem;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+.title{
+  display:grid;
+  margin-top:20vh;
+  padding:0px;
   color: white;
+  z-index:1;
+
+  font-size:2em;
+}
+.Home-div{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+h3{
+  color: #8FB0AB;
+}
+h1 span{
+  color: #7FCD78;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.Shahab{
+  color: #C67727;
+  animation: glow-2 1s ease-in-out infinite alternate;
+}
+.contact-link{
+  text-decoration: none;
+  text-align: center;
+  color: #7FCD78;
+  border-style: solid;
+  border-color: #7FCD78;
+  width:5em;
+  transition: 0.2s;
+}
+.contact-link:hover{
+  background-color: #7FCD78;
+  color:#011627;
+  transition: 0.2s;
+}
+p span{
+  color:#FA8DFC;
+}
+p{
+  width: 25em;
+}
+.contact{
+  display: flex;
+  margin-right: 10em;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.contact h1 {
+  font-size: 4em;
 }
 
-@keyframes App-logo-spin {
+.contact h1 span{
+  color: #FA8DFC;
+  animation: glow-3 1s ease-in-out infinite alternate;
+}
+
+
+.contact-form form input , textarea{
+    background-color: #011E36;
+    border-style: none;
+    font-size:x-large;
+    margin: 0.5em; 
+}
+.email{
+  width:14em;
+}
+.subject,.message{
+  width:calc(14em + 10em + 1.1em);
+}
+.message{
+  height:15rem;
+  text-align: center;
+
+}
+.message:focus{
+  height:15rem;
+  text-align: initial;
+}
+.message:focus::placeholder{
+  color:transparent;
+}
+.sub-btn{
+  margin:0.4em;
+  font-size:2rem;
+  background-color: #fa8dfc00;
+  border-style: solid;
+  border-color: #FA8DFC;
+  color: #FA8DFC;
+}
+.sub-btn{
+  margin:0.4em;
+  font-size:2rem;
+  background-color: #fa8dfc00;
+  border-style: solid;
+  border-color: #FA8DFC;
+  color: #FA8DFC;
+  transition:0.2s
+}
+.sub-btn:hover{
+  background-color: #FA8DFC;
+  border-color: #FA8DFC;
+  color: #011E36;
+}
+.sub-btn:active{
+  font-size:1.8rem;
+}
+
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 10px #7FCD78, 0 0 20px #7FCD78, 0 0 30px #48ff00;
   }
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 20px #7FCD78, 0 0 30px #7FCD78, 0 0 40px #48ff00;
+  }
+}
+@keyframes glow-2 {
+  from {
+    text-shadow: 0 0 10px #C67727, 0 0 20px #C67727, 0 0 30px #C67727;
+  }
+  to {
+    text-shadow: 0 0 20px #C67727, 0 0 30px #C67727, 0 0 40px #C67727;
+  }
+}
+@keyframes glow-3 {
+  from {
+    text-shadow: 0 0 5px #FA8DFC, 0 0 10px #FA8DFC, 0 0 20px #FA8DFC;
+  }
+  to {
+    text-shadow: 0 0 5px #FA8DFC, 0 0 10px #FA8DFC, 0 0 25px #FA8DFC;
   }
 }
